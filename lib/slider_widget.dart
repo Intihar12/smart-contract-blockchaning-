@@ -27,16 +27,16 @@ class _SliderWidgetState extends State<SliderWidget> {
   Widget build(BuildContext context) {
     double paddingFactor = .2;
 
-    if (this.widget.fullWidth) paddingFactor = .3;
+    if (this.widget.fullWidth) paddingFactor = .1;
 
     return Container(
       width: this.widget.fullWidth
           ? double.infinity
-          : (this.widget.sliderHeight) * 5.5,
+          : (this.widget.sliderHeight) * 6.5,
       height: (this.widget.sliderHeight),
       decoration: new BoxDecoration(
         borderRadius: new BorderRadius.all(
-          Radius.circular((this.widget.sliderHeight * .3)),
+          Radius.circular((this.widget.sliderHeight * 12.3)),
         ),
         gradient: new LinearGradient(
             colors: [
@@ -44,7 +44,7 @@ class _SliderWidgetState extends State<SliderWidget> {
               const Color(0xFF0072ff),
             ],
             begin: const FractionalOffset(0.0, 0.0),
-            end: const FractionalOffset(1.0, 1.00),
+            end: const FractionalOffset(0.0, 1.00),
             stops: [0.0, 1.0],
             tileMode: TileMode.clamp),
       ),
@@ -184,6 +184,7 @@ class CustomSliderThumbCircle extends SliderComponentShape {
 
 
 
+/*
 class CustomSliderThumbRect extends SliderComponentShape {
   final double thumbRadius;
   final thumbHeight;
@@ -251,4 +252,4 @@ class CustomSliderThumbRect extends SliderComponentShape {
   String getValue(double value) {
     return (min+(max-min)*value).round().toString();
   }
-}
+}*/
